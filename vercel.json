@@ -1,12 +1,17 @@
 {
-    "functions": {
-      "api": {
-        "handler": "app.handler",
-        "runtime": "python3.8"
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
       }
-    },
+    ],
     "routes": [
-      { "src": "/(.*)", "dest": "/app.py" }
-    ]
+      { "handle": "filesystem" },
+      { "src": "/(.*)", "dest": "app.py" }
+    ],
+    "env": {
+      "FLASK_ENV": "production"
+    }
   }
   
