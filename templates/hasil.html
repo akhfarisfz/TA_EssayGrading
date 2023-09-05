@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Personalisasi</title>
+</head>
+<body>
+    <h1>Hasil Personalisasi</h1>
+    
+    <p>Berikut adalah hasil personalisasi karakteristik siswa:</p>
+
+    <ul>
+        <li><strong>Nama:</strong> {{ data.nama }}</li>
+        <li><strong>Cluster:</strong> {{ cluster }}</li>
+        <li><strong>Nilai Matkul Bahasa Inggris 1:</strong> {{ data.nilai_matkul_bahasa_inggris_1 }}</li>
+        <li><strong>Nilai Matematika SMA Kelas 12:</strong> {{ data.nilai_matematika_sma_kelas_12 }}</li>
+        <li><strong>Memiliki Beasiswa:</strong> {{ data.memiliki_beasiswa }}</li>
+        <li><strong>Waktu Khusus Belajar:</strong> {{ data.waktu_khusus_belajar }}</li>
+        <li><strong>Suka Lomba:</strong> {{ data.suka_lomba }}</li>
+        <li><strong>Total Mengikuti Lomba:</strong> {{ data.total_mengikuti_lomba }}</li>
+        <li><strong>Pendidikan Ibu:</strong> {{ data.pendidikan_ibu }}</li>
+        <li><strong>Pendidikan Ayah:</strong> {{ data.pendidikan_ayah }}</li>
+        <li><strong>Penghasilan Orang Tua:</strong> {{ data.penghasilan_orang_tua }}</li>
+        <li><strong>Estimasi Waktu Perjalanan ke Kampus:</strong> {{ data.estimasi_waktu_perjalanan_ke_kampus }}</li>
+        <li><strong>Tempat Tinggal Kuliah (Kos):</strong> {{ data.tempat_tinggal_kuliah_kos }}</li>
+    </ul>
+    <!-- Tampilkan cluster -->
+    <p>Cluster: {{ cluster }}</p>
+
+    <!-- Tampilkan gambar plot -->
+    <img src="{{ url_for('static', filename=plot_filename) }}" alt="Cluster Distribution" width="400" height="300">
+
+    <!-- Tautan kembali ke halaman personalisasi -->
+    <p><a href="/personalisasi">Kembali ke Personalisasi</a></p>
+
+</body>
+</html>
